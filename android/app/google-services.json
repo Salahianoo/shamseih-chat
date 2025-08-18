@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "1047142319245",
+    "project_id": "shamseih-chat",
+    "storage_bucket": "shamseih-chat.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1047142319245:android:5e0a1a03eb60ed9fc50ec4",
+        "android_client_info": {
+          "package_name": "com.example.shamseih_chat"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCShDWLjfXKtlHjo67li-f3pvfD2jYUvoU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

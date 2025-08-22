@@ -6,6 +6,8 @@ import 'package:cloud_firestore/cloud_firestore.dart';
 import '../Firebase/firebase_notification.dart';
 import '../services/notification_service.dart';
 
+import 'package:flutter_screenutil/flutter_screenutil.dart';
+
 class ChatScreen extends StatefulWidget {
   static String id = 'chat_screen';
 
@@ -79,14 +81,14 @@ class _ChatScreenState extends State<ChatScreen> {
                         children: [
                           Padding(
                             padding: EdgeInsets.only(
-                              left: 12.0,
-                              right: 12.0,
-                              bottom: 2.0,
+                              left: 12.w,
+                              right: 12.w,
+                              bottom: 2.h,
                             ),
                             child: Text(
                               messageSender ?? '',
                               style: TextStyle(
-                                fontSize: 12.0,
+                                fontSize: 12.sp,
                                 color: Colors.black54,
                                 fontWeight: FontWeight.bold,
                               ),
@@ -178,12 +180,12 @@ class _ChatScreenState extends State<ChatScreen> {
                                   : null,
                               child: Container(
                                 margin: EdgeInsets.symmetric(
-                                  vertical: 2.0,
-                                  horizontal: 8.0,
+                                  vertical: 2.h,
+                                  horizontal: 8.w,
                                 ),
                                 padding: EdgeInsets.symmetric(
-                                  vertical: 10.0,
-                                  horizontal: 16.0,
+                                  vertical: 10.h,
+                                  horizontal: 16.w,
                                 ),
                                 decoration: BoxDecoration(
                                   color: isMe
@@ -193,21 +195,21 @@ class _ChatScreenState extends State<ChatScreen> {
                                           0.8,
                                         ),
                                   borderRadius: BorderRadius.only(
-                                    topLeft: Radius.circular(12.0),
-                                    topRight: Radius.circular(12.0),
+                                    topLeft: Radius.circular(12.r),
+                                    topRight: Radius.circular(12.r),
                                     bottomLeft: isMe
-                                        ? Radius.circular(12.0)
+                                        ? Radius.circular(12.r)
                                         : Radius.circular(0),
                                     bottomRight: isMe
                                         ? Radius.circular(0)
-                                        : Radius.circular(12.0),
+                                        : Radius.circular(12.r),
                                   ),
                                 ),
                                 child: Text(
                                   messageText ?? '',
                                   style: TextStyle(
                                     color: Colors.white,
-                                    fontSize: 16.0,
+                                    fontSize: 16.sp,
                                   ),
                                 ),
                               ),

@@ -7,6 +7,8 @@ import 'package:firebase_auth/firebase_auth.dart';
 import '../Firebase/firebase_notification.dart';
 import '../core/utils/secure_storage_service.dart';
 
+import 'package:flutter_screenutil/flutter_screenutil.dart';
+
 class LoginScreen extends StatefulWidget {
   static String id = 'login_screen';
 
@@ -59,12 +61,12 @@ class _LoginScreenState extends State<LoginScreen> {
                 child: Hero(
                   tag: 'logo',
                   child: SizedBox(
-                    height: 200.0,
+                    height: 200.h,
                     child: Image.asset('images/shamslogo.png'),
                   ),
                 ),
               ),
-              SizedBox(height: 48.0),
+              SizedBox(height: 48.h),
               TextField(
                 controller: emailController,
                 keyboardType: TextInputType.emailAddress,
@@ -76,7 +78,7 @@ class _LoginScreenState extends State<LoginScreen> {
                   hintText: 'Enter your email',
                 ),
               ),
-              SizedBox(height: 8.0),
+              SizedBox(height: 8.h),
               TextField(
                 controller: passwordController,
                 obscureText: !showPassword,
@@ -98,7 +100,7 @@ class _LoginScreenState extends State<LoginScreen> {
                   ),
                 ),
               ),
-              SizedBox(height: 24.0),
+              SizedBox(height: 24.h),
               RoundedButton(
                 title: 'Log In',
                 color: Colors.lightBlueAccent,
@@ -140,7 +142,7 @@ class _LoginScreenState extends State<LoginScreen> {
                   }
                 },
               ),
-              SizedBox(height: 12.0),
+              SizedBox(height: 12.h),
               RoundedButton(
                 title: 'Save',
                 color: Colors.green,

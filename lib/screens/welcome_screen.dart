@@ -5,6 +5,8 @@ import 'package:flutter/material.dart';
 import 'package:animated_text_kit/animated_text_kit.dart';
 import 'package:shamseih_chat/Firebase/firebase_notification.dart';
 
+import 'package:flutter_screenutil/flutter_screenutil.dart';
+
 class WelcomeScreen extends StatefulWidget {
   static String id = 'welcome_screen';
 
@@ -73,13 +75,13 @@ class _WelcomeScreenState extends State<WelcomeScreen>
                     );
                   },
                 ),
-                SizedBox(height: 60.0),
+                SizedBox(height: 60.h),
                 AnimatedTextKit(
                   animatedTexts: [
                     TypewriterAnimatedText(
                       'Shamseih Chat',
                       textStyle: TextStyle(
-                        fontSize: 30.0,
+                        fontSize: 30.sp,
                         fontWeight: FontWeight.w900,
                         color: Colors.black54,
                       ),
@@ -92,7 +94,7 @@ class _WelcomeScreenState extends State<WelcomeScreen>
                 ),
               ],
             ),
-            SizedBox(height: 48.0),
+            SizedBox(height: 48.h),
             RoundedButton(
               title: 'Log in',
               color: Colors.lightBlueAccent,
@@ -107,7 +109,7 @@ class _WelcomeScreenState extends State<WelcomeScreen>
                 Navigator.pushNamed(context, RegistrationScreen.id);
               },
             ),
-            SizedBox(height: 20.0),
+            SizedBox(height: 20.h),
             TextButton(
               onPressed: () async {
                 await FirebaseNotification().init(context);
@@ -116,7 +118,7 @@ class _WelcomeScreenState extends State<WelcomeScreen>
                 'Show FCM Token',
                 style: TextStyle(
                   color: Colors.black54,
-                  fontSize: 16.0,
+                  fontSize: 16.sp,
                   decoration: TextDecoration.underline,
                 ),
               ),
